@@ -1,0 +1,332 @@
+Page : 5f5c53e6aca54a23d65b3567, user : support26
+{
+    "widgetName" : "MainContainer",
+    "backgroundColor" : "none",
+    "rightColumn" : 1224,
+    "snapColumns" : 16,
+    "detachFromLayout" : true,
+    "widgetId" : "0",
+    "topRow" : 0,
+    "bottomRow" : 1360,
+    "containerStyle" : "none",
+    "snapRows" : 33,
+    "parentRowSpace" : 1,
+    "type" : "CANVAS_WIDGET",
+    "canExtend" : true,
+    "dynamicBindings" : {},
+    "version" : 5,
+    "minHeight" : 1292,
+    "parentColumnSpace" : 1,
+    "leftColumn" : 0,
+    "children" : [ 
+        {
+            "widgetName" : "Text1",
+            "rightColumn" : 12,
+            "textAlign" : "CENTER",
+            "widgetId" : "3nz99ffgvf",
+            "topRow" : 0,
+            "bottomRow" : 1,
+            "parentRowSpace" : 40,
+            "isVisible" : true,
+            "type" : "TEXT_WIDGET",
+            "dynamicBindings" : {
+                "value" : true,
+                "text" : true
+            },
+            "parentId" : "0",
+            "isLoading" : false,
+            "parentColumnSpace" : 74,
+            "leftColumn" : 3,
+            "text" : "<h1>{{appsmith.mode !== \"EDIT\" ? \"Edit this application to begin\" : \"Displaying Data in a Table\"}}</h1>",
+            "textStyle" : "LABEL"
+        }, 
+        {
+            "widgetName" : "Text2",
+            "rightColumn" : 14,
+            "textAlign" : "CENTER",
+            "widgetId" : "zw1l4lqlxq",
+            "topRow" : 1,
+            "bottomRow" : 2,
+            "parentRowSpace" : 40,
+            "isVisible" : true,
+            "type" : "TEXT_WIDGET",
+            "dynamicBindings" : {
+                "value" : true
+            },
+            "shouldScroll" : false,
+            "parentId" : "0",
+            "isLoading" : false,
+            "parentColumnSpace" : 74,
+            "leftColumn" : 1,
+            "text" : "This page demonstrates how Tables can display data from APIs & DB Queries, paginated the data & transform it to suit the widget",
+            "textStyle" : "BODY"
+        }, 
+        {
+            "hiddenColumns" : [ 
+                "createdAt", 
+                "updatedAt", 
+                "avatar", 
+                "gender"
+            ],
+            "widgetName" : "usersTable",
+            "rightColumn" : 10,
+            "widgetId" : "sf07g7owd4",
+            "topRow" : 4,
+            "bottomRow" : 14,
+            "parentRowSpace" : 40,
+            "onPageChange" : "{{getUsers.run()}}",
+            "tableData" : "{{getUsers.data}}",
+            "isVisible" : true,
+            "label" : "Data",
+            "searchKey" : "",
+            "type" : "TABLE_WIDGET",
+            "dynamicBindings" : {
+                "tableData" : true,
+                "selectedRow" : true,
+                "filteredTableData" : true
+            },
+            "parentId" : "0",
+            "serverSidePaginationEnabled" : true,
+            "isLoading" : false,
+            "parentColumnSpace" : 74,
+            "leftColumn" : 0,
+            "dynamicTriggers" : {
+                "onPageChange" : true
+            },
+            "columnSizeMap" : {
+                "address" : 284,
+                "gender" : 99,
+                "name" : 130,
+                "id" : 70,
+                "email" : 175
+            }
+        }, 
+        {
+            "widgetName" : "Text3",
+            "rightColumn" : 16,
+            "textAlign" : "LEFT",
+            "widgetId" : "wihhcbu9c4",
+            "topRow" : 4,
+            "bottomRow" : 10,
+            "parentRowSpace" : 40,
+            "isVisible" : "{{appsmith.mode === \"EDIT\"}}",
+            "type" : "TEXT_WIDGET",
+            "dynamicBindings" : {
+                "value" : true,
+                "text" : true,
+                "isVisible" : true
+            },
+            "parentId" : "0",
+            "isLoading" : false,
+            "parentColumnSpace" : 74,
+            "leftColumn" : 11,
+            "text" : "<p style=\"font-size: 16px; line-height: 1.5\">💡 The table fetches data via the <b>getUsers</b> Query. The data is bound to the table property using<br/><b>{{ \"{{ getUsers.data }}\" }}.</b><br/><br/>\n📄The <b>getUsers</b> Query takes the pageNo of the table to paginate the request using <br/><b>{{\"{{ usersTable.pageNo }}\"}}</b> in the query.\n<br/>The table has server side pagination enabled and executes the query on page change.\n</p>",
+            "textStyle" : "BODY",
+            "shouldScroll" : true,
+            "dynamicProperties" : {
+                "isVisible" : true
+            }
+        }, 
+        {
+            "widgetName" : "Text5",
+            "rightColumn" : 4,
+            "textAlign" : "LEFT",
+            "widgetId" : "2ea3qtzuug",
+            "topRow" : 3,
+            "bottomRow" : 4,
+            "parentRowSpace" : 40,
+            "isVisible" : true,
+            "type" : "TEXT_WIDGET",
+            "dynamicBindings" : {
+                "value" : true
+            },
+            "parentId" : "0",
+            "isLoading" : false,
+            "parentColumnSpace" : 74,
+            "leftColumn" : 0,
+            "text" : "👤 Users",
+            "textStyle" : "HEADING"
+        }, 
+        {
+            "hiddenColumns" : [ 
+                "avatar", 
+                "updatedAt", 
+                "gender", 
+                "address"
+            ],
+            "widgetName" : "usersTableFormatted",
+            "rightColumn" : 10,
+            "widgetId" : "6fxa6ls1xm",
+            "topRow" : 16,
+            "bottomRow" : 32,
+            "parentRowSpace" : 40,
+            "onPageChange" : "{{getUsersAPI.run()}}",
+            "tableData" : "{{getUsersAPI.data.users.map((user) => { \n  return {\n\t\t...user,\n\t\tstatus: user.status.toLowerCase(),\n\t\tcreatedAt: moment(user.createdAt).format(\"Do MMM YYYY\")\n\t}\n})}}",
+            "isVisible" : true,
+            "label" : "Data",
+            "searchKey" : "",
+            "type" : "TABLE_WIDGET",
+            "dynamicBindings" : {
+                "tableData" : true,
+                "selectedRow" : true,
+                "filteredTableData" : true
+            },
+            "parentId" : "0",
+            "isLoading" : false,
+            "parentColumnSpace" : 74,
+            "leftColumn" : 0,
+            "dynamicTriggers" : {
+                "onPageChange" : true
+            },
+            "columnSizeMap" : {
+                "id" : 84,
+                "email" : 204
+            },
+            "serverSidePaginationEnabled" : true
+        }, 
+        {
+            "widgetName" : "Text8",
+            "rightColumn" : 4,
+            "textAlign" : "LEFT",
+            "widgetId" : "y6lqi4r1xl",
+            "topRow" : 15,
+            "bottomRow" : 16,
+            "parentRowSpace" : 40,
+            "isVisible" : true,
+            "type" : "TEXT_WIDGET",
+            "dynamicBindings" : {
+                "value" : true
+            },
+            "parentId" : "0",
+            "isLoading" : false,
+            "parentColumnSpace" : 74,
+            "leftColumn" : 0,
+            "text" : "😍 Formatted Users",
+            "textStyle" : "HEADING"
+        }, 
+        {
+            "widgetName" : "Text9",
+            "rightColumn" : 16,
+            "textAlign" : "LEFT",
+            "widgetId" : "hd75cgspiv",
+            "topRow" : 16,
+            "bottomRow" : 24,
+            "parentRowSpace" : 40,
+            "isVisible" : "{{appsmith.mode === \"EDIT\"}}",
+            "type" : "TEXT_WIDGET",
+            "dynamicBindings" : {
+                "value" : true,
+                "text" : true,
+                "isVisible" : true
+            },
+            "parentId" : "0",
+            "isLoading" : false,
+            "parentColumnSpace" : 74,
+            "leftColumn" : 11,
+            "text" : "<p style=\"font-size: 16px; line-height: 1.5\">🌩️ Often data returned by an API is not in the format the table requires. To convert the data to the correct format, we use Javascript and transform the data in the table data property.<br/><br/>\n🌪️ The table maps over the data returned by <b>getUsersAPI</b>, changes the status field to lowercase and formats the date field.<br/><br/>\n🧱 APIs, Queries and Widgets are all objects of the application exposed via Javascript inside <b>{{\"{{}}\"}}</b>\n</p>",
+            "textStyle" : "BODY",
+            "shouldScroll" : true,
+            "dynamicProperties" : {
+                "isVisible" : true
+            }
+        }, 
+        {
+            "isVisible" : "{{appsmith.mode === \"EDIT\"}}",
+            "text" : "<p style=\"font-size: 16px; line-height: 1.5\">🔍 Inspect the table properties.<br/> <br/>🔠 Try updating the function in the table property and format the <b>status</b> field to begin with a capital letter!</p>",
+            "textStyle" : "BODY",
+            "textAlign" : "LEFT",
+            "widgetName" : "Text12",
+            "type" : "TEXT_WIDGET",
+            "isLoading" : false,
+            "parentColumnSpace" : 74,
+            "parentRowSpace" : 40,
+            "leftColumn" : 11,
+            "rightColumn" : 16,
+            "topRow" : 26,
+            "bottomRow" : 30,
+            "parentId" : "0",
+            "widgetId" : "ow78o27gb5",
+            "dynamicBindings" : {
+                "value" : true,
+                "isVisible" : true
+            },
+            "shouldScroll" : true,
+            "dynamicProperties" : {
+                "isVisible" : true
+            }
+        }, 
+        {
+            "isVisible" : "{{appsmith.mode === \"EDIT\"}}",
+            "text" : "-------------------------------------------------",
+            "textStyle" : "LABEL",
+            "textAlign" : "LEFT",
+            "widgetName" : "Text13",
+            "type" : "TEXT_WIDGET",
+            "isLoading" : false,
+            "parentColumnSpace" : 74,
+            "parentRowSpace" : 40,
+            "leftColumn" : 11,
+            "rightColumn" : 16,
+            "topRow" : 10,
+            "bottomRow" : 11,
+            "parentId" : "0",
+            "widgetId" : "hmh7iay9le",
+            "dynamicBindings" : {
+                "value" : true,
+                "isVisible" : true
+            },
+            "dynamicProperties" : {
+                "isVisible" : true
+            }
+        }, 
+        {
+            "isVisible" : "{{appsmith.mode === \"EDIT\"}}",
+            "text" : "<p style=\"font-size: 16px; line-height: 1.5\">🔍 Inspect the table properties & the <b>getUsers</b> Query.<br/><br/>🌟 Try navigating through the table's pages.</p>",
+            "textStyle" : "BODY",
+            "textAlign" : "LEFT",
+            "widgetName" : "Text14",
+            "type" : "TEXT_WIDGET",
+            "isLoading" : false,
+            "parentColumnSpace" : 74,
+            "parentRowSpace" : 40,
+            "leftColumn" : 11,
+            "rightColumn" : 16,
+            "topRow" : 11,
+            "bottomRow" : 15,
+            "parentId" : "0",
+            "widgetId" : "xff54m33y3",
+            "dynamicBindings" : {
+                "value" : true,
+                "isVisible" : true
+            },
+            "shouldScroll" : true,
+            "dynamicProperties" : {
+                "isVisible" : true
+            }
+        }, 
+        {
+            "isVisible" : "{{appsmith.mode === \"EDIT\"}}",
+            "text" : "-------------------------------------------------",
+            "textStyle" : "LABEL",
+            "textAlign" : "LEFT",
+            "widgetName" : "Text15",
+            "type" : "TEXT_WIDGET",
+            "isLoading" : false,
+            "parentColumnSpace" : 74,
+            "parentRowSpace" : 40,
+            "leftColumn" : 11,
+            "rightColumn" : 16,
+            "topRow" : 25,
+            "bottomRow" : 26,
+            "parentId" : "0",
+            "widgetId" : "mlmkyirm8n",
+            "dynamicBindings" : {
+                "value" : true,
+                "isVisible" : true
+            },
+            "dynamicProperties" : {
+                "isVisible" : true
+            }
+        }
+    ]
+}

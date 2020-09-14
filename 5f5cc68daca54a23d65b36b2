@@ -1,0 +1,22 @@
+Page : 5f5cc68daca54a23d65b36b2, user : support26
+{
+    "widgetName" : "MainContainer",
+    "backgroundColor" : "none",
+    "rightColumn" : 1224,
+    "snapColumns" : 16,
+    "detachFromLayout" : true,
+    "widgetId" : "0",
+    "topRow" : 0,
+    "bottomRow" : 1254,
+    "containerStyle" : "none",
+    "snapRows" : 33,
+    "parentRowSpace" : 1,
+    "type" : "CANVAS_WIDGET",
+    "canExtend" : true,
+    "dynamicBindings" : {},
+    "version" : 4,
+    "minHeight" : 1292,
+    "parentColumnSpace" : 1,
+    "leftColumn" : 0,
+    "children" : []
+}

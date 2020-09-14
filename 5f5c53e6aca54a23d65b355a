@@ -1,0 +1,1160 @@
+Page : 5f5c53e6aca54a23d65b355a, user : support26
+{
+    "widgetName" : "MainContainer",
+    "backgroundColor" : "none",
+    "rightColumn" : 1224,
+    "snapColumns" : 16,
+    "detachFromLayout" : true,
+    "widgetId" : "0",
+    "topRow" : 0,
+    "bottomRow" : 1280,
+    "containerStyle" : "none",
+    "snapRows" : 33,
+    "parentRowSpace" : 1,
+    "type" : "CANVAS_WIDGET",
+    "canExtend" : true,
+    "dynamicBindings" : {},
+    "version" : 5,
+    "minHeight" : 1292,
+    "parentColumnSpace" : 1,
+    "leftColumn" : 0,
+    "children" : [ 
+        {
+            "hiddenColumns" : [ 
+                "interview_datetime", 
+                "resume_url", 
+                "application_datetime", 
+                "id", 
+                "application_status"
+            ],
+            "widgetName" : "application_table",
+            "rightColumn" : 9,
+            "columnNameMap" : {
+                "candidate_name" : "Candidate Name",
+                "applied_role" : "Applied Role",
+                "candidate_email" : "Email",
+                "candidate_phone_no" : "Phone No"
+            },
+            "widgetId" : "4aulhdrsw7",
+            "topRow" : 1,
+            "bottomRow" : 19,
+            "parentRowSpace" : 40,
+            "onPageChange" : "{{getApplications.run()}}",
+            "tableData" : "{{getApplications.data}}",
+            "isVisible" : true,
+            "label" : "Data",
+            "searchKey" : "",
+            "type" : "TABLE_WIDGET",
+            "dynamicBindings" : {
+                "tableData" : true
+            },
+            "parentId" : "0",
+            "serverSidePaginationEnabled" : true,
+            "isLoading" : false,
+            "onSearchTextChanged" : "{{getApplications.run()}}",
+            "parentColumnSpace" : 74,
+            "leftColumn" : 0,
+            "dynamicTriggers" : {
+                "onSearchTextChanged" : true,
+                "onRowSelected" : true,
+                "onPageChange" : true
+            },
+            "onRowSelected" : "{{fetchFeedback.run()}}",
+            "columnSizeMap" : {
+                "id" : 60,
+                "candidate_name" : 185,
+                "candidate_email" : 182
+            }
+        }, 
+        {
+            "widgetName" : "status_dropdown",
+            "rightColumn" : 9,
+            "widgetId" : "pnny8dt51a",
+            "topRow" : 0,
+            "bottomRow" : 1,
+            "parentRowSpace" : 40,
+            "isVisible" : true,
+            "label" : "",
+            "type" : "DROP_DOWN_WIDGET",
+            "dynamicBindings" : {
+                "selectedOptionArr" : true,
+                "isValid" : true,
+                "selectedIndexArr" : true,
+                "selectedOption" : true,
+                "value" : true,
+                "selectedIndex" : true
+            },
+            "parentId" : "0",
+            "isLoading" : false,
+            "defaultOptionValue" : "All",
+            "selectionType" : "SINGLE_SELECT",
+            "parentColumnSpace" : 74,
+            "leftColumn" : 6,
+            "dynamicTriggers" : {
+                "onOptionChange" : true
+            },
+            "options" : "[\n{\n    \"label\": \"All\",\n    \"value\": \"All\"\n  },\n  {\n    \"label\": \"Applied\",\n    \"value\": \"Applied\"\n  },\n  {\n    \"label\": \"Contacted\",\n    \"value\": \"Contacted\"\n  },\n  {\n    \"label\": \"Interview Scheduled\",\n    \"value\": \"Interview Scheduled\"\n  },\n\t{\n    \"label\": \"Feedback Received\",\n    \"value\": \"Feedback Received\"\n  },\n\t{\n    \"label\": \"Candidate Rejected\",\n    \"value\": \"Candidate Rejected\"\n  },\n\t{\n    \"label\": \"Offer Made\",\n    \"value\": \"Offer Made\"\n  },\n\t{\n    \"label\": \"Offer Accepted\",\n    \"value\": \"Offer Accepted\"\n  },\n\t{\n    \"label\": \"Offer Rejected\",\n    \"value\": \"Offer Rejected\"\n  }\n]",
+            "onOptionChange" : "{{getApplications.run()}}"
+        }, 
+        {
+            "backgroundColor" : "#FFFFFF",
+            "widgetName" : "Container1",
+            "rightColumn" : 16,
+            "widgetId" : "yedzcruxdu",
+            "containerStyle" : "card",
+            "topRow" : 1,
+            "bottomRow" : 7,
+            "parentRowSpace" : 40,
+            "isVisible" : true,
+            "type" : "CONTAINER_WIDGET",
+            "parentId" : "0",
+            "blueprint" : {
+                "view" : [ 
+                    {
+                        "position" : {
+                            "top" : 0,
+                            "left" : 0
+                        },
+                        "type" : "CANVAS_WIDGET",
+                        "props" : {
+                            "detachFromLayout" : true,
+                            "children" : [ 
+                                "as2xpsslu8", 
+                                "8vw8xkw2hr", 
+                                "mtbmxy0c28", 
+                                "344we5qfz7", 
+                                "gginf48g6o", 
+                                "hn2w62bn92", 
+                                "4kz50a2esn", 
+                                "ualghxykwd", 
+                                "itehdmnimm", 
+                                "xxhj5gh841", 
+                                "c3s99fz0k7"
+                            ],
+                            "containerStyle" : "none",
+                            "canExtend" : false
+                        }
+                    }
+                ]
+            },
+            "isLoading" : false,
+            "parentColumnSpace" : 74,
+            "leftColumn" : 9,
+            "children" : [ 
+                {
+                    "widgetName" : "Canvas1",
+                    "rightColumn" : 592,
+                    "detachFromLayout" : true,
+                    "widgetId" : "2zmso1n1ry",
+                    "containerStyle" : "none",
+                    "topRow" : 0,
+                    "bottomRow" : 400,
+                    "parentRowSpace" : 1,
+                    "isVisible" : true,
+                    "canExtend" : false,
+                    "type" : "CANVAS_WIDGET",
+                    "parentId" : "yedzcruxdu",
+                    "minHeight" : 400,
+                    "isLoading" : false,
+                    "parentColumnSpace" : 1,
+                    "leftColumn" : 0,
+                    "children" : [ 
+                        {
+                            "widgetName" : "Text1",
+                            "rightColumn" : 3,
+                            "textAlign" : "LEFT",
+                            "widgetId" : "as2xpsslu8",
+                            "topRow" : 0,
+                            "bottomRow" : 1,
+                            "parentRowSpace" : 40,
+                            "isVisible" : true,
+                            "type" : "TEXT_WIDGET",
+                            "dynamicBindings" : {
+                                "value" : true
+                            },
+                            "parentId" : "2zmso1n1ry",
+                            "isLoading" : false,
+                            "parentColumnSpace" : 25.25,
+                            "leftColumn" : 0,
+                            "text" : "Name",
+                            "textStyle" : "LABEL"
+                        }, 
+                        {
+                            "widgetName" : "Text2",
+                            "rightColumn" : 3,
+                            "textAlign" : "LEFT",
+                            "widgetId" : "8vw8xkw2hr",
+                            "topRow" : 1,
+                            "bottomRow" : 2,
+                            "parentRowSpace" : 40,
+                            "isVisible" : true,
+                            "type" : "TEXT_WIDGET",
+                            "dynamicBindings" : {
+                                "value" : true
+                            },
+                            "parentId" : "2zmso1n1ry",
+                            "isLoading" : false,
+                            "parentColumnSpace" : 25.25,
+                            "leftColumn" : 0,
+                            "text" : "Email",
+                            "textStyle" : "LABEL"
+                        }, 
+                        {
+                            "widgetName" : "Text3",
+                            "rightColumn" : 3,
+                            "textAlign" : "LEFT",
+                            "widgetId" : "mtbmxy0c28",
+                            "topRow" : 2,
+                            "bottomRow" : 3,
+                            "parentRowSpace" : 40,
+                            "isVisible" : true,
+                            "type" : "TEXT_WIDGET",
+                            "dynamicBindings" : {
+                                "value" : true
+                            },
+                            "parentId" : "2zmso1n1ry",
+                            "isLoading" : false,
+                            "parentColumnSpace" : 25.25,
+                            "leftColumn" : 0,
+                            "text" : "Phone No",
+                            "textStyle" : "LABEL"
+                        }, 
+                        {
+                            "widgetName" : "Text4",
+                            "rightColumn" : 3,
+                            "textAlign" : "LEFT",
+                            "widgetId" : "344we5qfz7",
+                            "topRow" : 3,
+                            "bottomRow" : 4,
+                            "parentRowSpace" : 40,
+                            "isVisible" : true,
+                            "type" : "TEXT_WIDGET",
+                            "dynamicBindings" : {
+                                "value" : true
+                            },
+                            "parentId" : "2zmso1n1ry",
+                            "isLoading" : false,
+                            "parentColumnSpace" : 25.25,
+                            "leftColumn" : 0,
+                            "text" : "Resume",
+                            "textStyle" : "LABEL"
+                        }, 
+                        {
+                            "widgetName" : "applicant_status_dropdown",
+                            "rightColumn" : 10,
+                            "widgetId" : "gginf48g6o",
+                            "dynamicProperties" : {
+                                "isVisible" : true
+                            },
+                            "topRow" : 4,
+                            "bottomRow" : 5,
+                            "parentRowSpace" : 40,
+                            "isVisible" : "{{application_table.selectedRow.id !== undefined}}",
+                            "label" : "",
+                            "type" : "DROP_DOWN_WIDGET",
+                            "dynamicBindings" : {
+                                "defaultOptionValue" : true,
+                                "selectedOptionArr" : true,
+                                "isValid" : true,
+                                "selectedIndexArr" : true,
+                                "isVisible" : true,
+                                "selectedOption" : true,
+                                "value" : true,
+                                "selectedIndex" : true
+                            },
+                            "parentId" : "2zmso1n1ry",
+                            "isLoading" : false,
+                            "defaultOptionValue" : "{{application_table.selectedRow.application_status}}",
+                            "selectionType" : "SINGLE_SELECT",
+                            "parentColumnSpace" : 25.25,
+                            "leftColumn" : 3,
+                            "dynamicTriggers" : {
+                                "onOptionChange" : true
+                            },
+                            "options" : "[\n  {\n    \"label\": \"Applied\",\n    \"value\": \"Applied\"\n  },\n  {\n    \"label\": \"Contacted\",\n    \"value\": \"Contacted\"\n  },\n  {\n    \"label\": \"Interview Scheduled\",\n    \"value\": \"Interview Scheduled\"\n  },\n\t{\n    \"label\": \"Feedback Received\",\n    \"value\": \"Feedback Received\"\n  },\n\t{\n    \"label\": \"Candidate Rejected\",\n    \"value\": \"Candidate Rejected\"\n  },\n\t{\n    \"label\": \"Offer Made\",\n    \"value\": \"Offer Made\"\n  },\n\t{\n    \"label\": \"Offer Accepted\",\n    \"value\": \"Offer Accepted\"\n  },\n\t{\n    \"label\": \"Offer Rejected\",\n    \"value\": \"Offer Rejected\"\n  }\n]",
+                            "onOptionChange" : "{{updateApplicationStatus.run(() => getApplications.run(), () => {})}}"
+                        }, 
+                        {
+                            "widgetName" : "Text5",
+                            "rightColumn" : 3,
+                            "textAlign" : "LEFT",
+                            "widgetId" : "hn2w62bn92",
+                            "topRow" : 4,
+                            "bottomRow" : 5,
+                            "parentRowSpace" : 40,
+                            "isVisible" : true,
+                            "type" : "TEXT_WIDGET",
+                            "dynamicBindings" : {
+                                "value" : true
+                            },
+                            "parentId" : "2zmso1n1ry",
+                            "isLoading" : false,
+                            "parentColumnSpace" : 25.25,
+                            "leftColumn" : 0,
+                            "text" : "Status",
+                            "textStyle" : "LABEL"
+                        }, 
+                        {
+                            "widgetName" : "Text6",
+                            "rightColumn" : 12,
+                            "textAlign" : "LEFT",
+                            "widgetId" : "ualghxykwd",
+                            "topRow" : 0,
+                            "bottomRow" : 1,
+                            "parentRowSpace" : 40,
+                            "isVisible" : true,
+                            "type" : "TEXT_WIDGET",
+                            "dynamicBindings" : {
+                                "text" : true,
+                                "value" : true
+                            },
+                            "parentId" : "2zmso1n1ry",
+                            "isLoading" : false,
+                            "parentColumnSpace" : 25.25,
+                            "leftColumn" : 3,
+                            "text" : "{{application_table.selectedRow.candidate_name}}",
+                            "textStyle" : "LABEL"
+                        }, 
+                        {
+                            "widgetName" : "Text7",
+                            "rightColumn" : 12,
+                            "textAlign" : "LEFT",
+                            "widgetId" : "itehdmnimm",
+                            "topRow" : 1,
+                            "bottomRow" : 2,
+                            "parentRowSpace" : 40,
+                            "isVisible" : true,
+                            "type" : "TEXT_WIDGET",
+                            "dynamicBindings" : {
+                                "text" : true,
+                                "value" : true
+                            },
+                            "parentId" : "2zmso1n1ry",
+                            "isLoading" : false,
+                            "parentColumnSpace" : 25.25,
+                            "leftColumn" : 3,
+                            "text" : "{{application_table.selectedRow.candidate_email}}",
+                            "textStyle" : "LABEL"
+                        }, 
+                        {
+                            "widgetName" : "Text8",
+                            "rightColumn" : 12,
+                            "textAlign" : "LEFT",
+                            "widgetId" : "xxhj5gh841",
+                            "topRow" : 2,
+                            "bottomRow" : 3,
+                            "parentRowSpace" : 40,
+                            "isVisible" : true,
+                            "type" : "TEXT_WIDGET",
+                            "dynamicBindings" : {
+                                "text" : true,
+                                "value" : true
+                            },
+                            "parentId" : "2zmso1n1ry",
+                            "isLoading" : false,
+                            "parentColumnSpace" : 25.25,
+                            "leftColumn" : 3,
+                            "text" : "{{application_table.selectedRow.candidate_phone_no}}",
+                            "textStyle" : "LABEL"
+                        }, 
+                        {
+                            "widgetName" : "Text9",
+                            "rightColumn" : 11,
+                            "textAlign" : "LEFT",
+                            "widgetId" : "c3s99fz0k7",
+                            "dynamicProperties" : {
+                                "isVisible" : true
+                            },
+                            "topRow" : 3,
+                            "bottomRow" : 4,
+                            "parentRowSpace" : 40,
+                            "isVisible" : "{{application_table.selectedRow.id !== undefined}}",
+                            "type" : "TEXT_WIDGET",
+                            "dynamicBindings" : {
+                                "text" : true,
+                                "isVisible" : true,
+                                "value" : true
+                            },
+                            "parentId" : "2zmso1n1ry",
+                            "isLoading" : false,
+                            "parentColumnSpace" : 25.25,
+                            "leftColumn" : 3,
+                            "text" : "<a href=\"{{application_table.selectedRow.resume_url}}\" target=\"_blank\">Resume</a>",
+                            "textStyle" : "LABEL"
+                        }, 
+                        {
+                            "widgetName" : "Text20",
+                            "rightColumn" : 16,
+                            "textAlign" : "LEFT",
+                            "widgetId" : "6dkvtogi06",
+                            "topRow" : 0,
+                            "bottomRow" : 1,
+                            "parentRowSpace" : 40,
+                            "isVisible" : false,
+                            "type" : "TEXT_WIDGET",
+                            "dynamicBindings" : {
+                                "text" : true,
+                                "value" : true
+                            },
+                            "parentId" : "2zmso1n1ry",
+                            "isLoading" : false,
+                            "parentColumnSpace" : 25.25,
+                            "leftColumn" : 12,
+                            "text" : "{{appsmith.URL.hash.split('&')[0].substring(1).split(\"=\")[1]}}",
+                            "textStyle" : "LABEL"
+                        }, 
+                        {
+                            "widgetName" : "Text23",
+                            "rightColumn" : 16,
+                            "textAlign" : "LEFT",
+                            "widgetId" : "ejw76abh9v",
+                            "topRow" : 1,
+                            "bottomRow" : 2,
+                            "parentRowSpace" : 40,
+                            "isVisible" : true,
+                            "type" : "TEXT_WIDGET",
+                            "dynamicBindings" : {
+                                "value" : true
+                            },
+                            "parentId" : "2zmso1n1ry",
+                            "isLoading" : false,
+                            "parentColumnSpace" : 25.25,
+                            "leftColumn" : 12,
+                            "text" : "",
+                            "textStyle" : "LABEL"
+                        }, 
+                        {
+                            "widgetName" : "Button2",
+                            "rightColumn" : 16,
+                            "onClick" : "{{ appsmith.URL.hash === \"\" ? navigateTo('https://accounts.google.com/o/oauth2/v2/auth?client_id=206019418358-g2ns8f68qqt6kove3q150flc92227b0b.apps.googleusercontent.com&redirect_uri=https://app.appsmith.com/applications/5f43bce13697fd5df1c52ce4/pages/5f43c39c3697fd5df1c52d50&response_type=token&scope=https://www.googleapis.com/auth/calendar.events') : showModal('Modal1')}}",
+                            "isDefaultClickDisabled" : true,
+                            "widgetId" : "5i51a16ia0",
+                            "dynamicProperties" : {
+                                "onClick" : true,
+                                "isVisible" : true
+                            },
+                            "buttonStyle" : "PRIMARY_BUTTON",
+                            "topRow" : 4,
+                            "bottomRow" : 5,
+                            "parentRowSpace" : 40,
+                            "isVisible" : "{{application_table.selectedRow.application_status === \"Contacted\" || application_table.selectedRow.application_status === \"Applied\"}}",
+                            "type" : "BUTTON_WIDGET",
+                            "dynamicBindings" : {
+                                "isVisible" : true
+                            },
+                            "parentId" : "2zmso1n1ry",
+                            "isLoading" : false,
+                            "parentColumnSpace" : 29.875,
+                            "leftColumn" : 10,
+                            "dynamicTriggers" : {
+                                "onClick" : true
+                            },
+                            "text" : "Schedule Interview",
+                            "isDisabled" : false
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            "widgetName" : "Text22",
+            "rightColumn" : 4,
+            "textAlign" : "LEFT",
+            "widgetId" : "wzbd482jqa",
+            "topRow" : 0,
+            "bottomRow" : 1,
+            "parentRowSpace" : 40,
+            "isVisible" : true,
+            "type" : "TEXT_WIDGET",
+            "dynamicBindings" : {
+                "value" : true
+            },
+            "parentId" : "0",
+            "isLoading" : false,
+            "parentColumnSpace" : 74,
+            "leftColumn" : 0,
+            "text" : "Job Applications",
+            "textStyle" : "HEADING"
+        }, 
+        {
+            "widgetName" : "Tabs1",
+            "rightColumn" : 16,
+            "widgetId" : "4kz50a2esn",
+            "dynamicProperties" : {
+                "isVisible" : true
+            },
+            "defaultTab" : "{{application_table.selectedRow.application_status}}",
+            "topRow" : 7,
+            "bottomRow" : 19,
+            "tabs" : "[{\"label\":\"Feedback Received\",\"id\":\"tab2\"}]",
+            "shouldShowTabs" : false,
+            "parentRowSpace" : 40,
+            "isVisible" : "{{application_table.selectedRow.application_status === \"Feedback Received\"}}",
+            "type" : "TABS_WIDGET",
+            "dynamicBindings" : {
+                "defaultTab" : true,
+                "isVisible" : true,
+                "selectedTab" : true
+            },
+            "parentId" : "0",
+            "shouldScrollContents" : false,
+            "blueprint" : {
+                "view" : [ 
+                    {
+                        "size" : {
+                            "rows" : 6,
+                            "cols" : 16
+                        },
+                        "position" : {
+                            "top" : 0,
+                            "left" : 0
+                        },
+                        "type" : "CANVAS_WIDGET",
+                        "props" : {
+                            "tabId" : "tab1",
+                            "detachFromLayout" : true,
+                            "children" : [ 
+                                "zcw649etg1", 
+                                "xwa5c3sznp", 
+                                "rfeu1yvz8i", 
+                                "1pneb32nut", 
+                                "u2e0rtojep", 
+                                "o4xtndk4ei", 
+                                "89byxh6n9u", 
+                                "mhv4w9h4wt", 
+                                "rxcfvahcds"
+                            ],
+                            "containerStyle" : "none",
+                            "canExtend" : false
+                        }
+                    }, 
+                    {
+                        "size" : {
+                            "rows" : 6,
+                            "cols" : 16
+                        },
+                        "position" : {
+                            "top" : 0,
+                            "left" : 0
+                        },
+                        "type" : "CANVAS_WIDGET",
+                        "props" : {
+                            "tabId" : "tab2",
+                            "detachFromLayout" : true,
+                            "children" : [],
+                            "containerStyle" : "none",
+                            "canExtend" : false
+                        }
+                    }
+                ]
+            },
+            "isLoading" : false,
+            "parentColumnSpace" : 25.25,
+            "leftColumn" : 9,
+            "children" : [ 
+                {
+                    "tabId" : "tab2",
+                    "widgetName" : "Canvas3",
+                    "rightColumn" : 202,
+                    "detachFromLayout" : true,
+                    "widgetId" : "oqzltzb9h8",
+                    "containerStyle" : "none",
+                    "topRow" : 0,
+                    "bottomRow" : 280,
+                    "parentRowSpace" : 1,
+                    "isVisible" : true,
+                    "canExtend" : false,
+                    "type" : "CANVAS_WIDGET",
+                    "parentId" : "4kz50a2esn",
+                    "minHeight" : 280,
+                    "isLoading" : false,
+                    "parentColumnSpace" : 1,
+                    "leftColumn" : 0,
+                    "children" : [ 
+                        {
+                            "widgetName" : "Text24",
+                            "rightColumn" : 6,
+                            "textAlign" : "LEFT",
+                            "widgetId" : "m6ihketdb7",
+                            "topRow" : 0,
+                            "bottomRow" : 1,
+                            "parentRowSpace" : 40,
+                            "isVisible" : true,
+                            "type" : "TEXT_WIDGET",
+                            "dynamicBindings" : {
+                                "value" : true
+                            },
+                            "parentId" : "oqzltzb9h8",
+                            "isLoading" : false,
+                            "parentColumnSpace" : 22.75,
+                            "leftColumn" : 0,
+                            "text" : "Feedback",
+                            "textStyle" : "HEADING"
+                        }, 
+                        {
+                            "hiddenColumns" : [ 
+                                "id", 
+                                "application_id"
+                            ],
+                            "widgetName" : "Table1",
+                            "rightColumn" : 16,
+                            "columnOrder" : [ 
+                                "interviewer", 
+                                "rating", 
+                                "feedback", 
+                                "id", 
+                                "application_id"
+                            ],
+                            "widgetId" : "63e8dftw7g",
+                            "topRow" : 1,
+                            "bottomRow" : 10,
+                            "parentRowSpace" : 40,
+                            "tableData" : "{{fetchFeedback.data}}",
+                            "isVisible" : true,
+                            "label" : "Data",
+                            "searchKey" : "",
+                            "type" : "TABLE_WIDGET",
+                            "dynamicBindings" : {
+                                "tableData" : true
+                            },
+                            "parentId" : "oqzltzb9h8",
+                            "isLoading" : false,
+                            "parentColumnSpace" : 22.75,
+                            "leftColumn" : 0,
+                            "columnSizeMap" : {
+                                "interviewer" : 113,
+                                "feedback" : 283,
+                                "rating" : 75
+                            }
+                        }
+                    ]
+                }
+            ]
+        }, 
+        {
+            "widgetName" : "Modal1",
+            "rightColumn" : 0,
+            "detachFromLayout" : true,
+            "widgetId" : "fcrbnnx0vb",
+            "topRow" : 0,
+            "bottomRow" : 0,
+            "parentRowSpace" : 1,
+            "canOutsideClickClose" : true,
+            "type" : "MODAL_WIDGET",
+            "canEscapeKeyClose" : true,
+            "dynamicBindings" : {},
+            "parentId" : "0",
+            "shouldScrollContents" : true,
+            "blueprint" : {
+                "view" : [ 
+                    {
+                        "position" : {
+                            "top" : 0,
+                            "left" : 0
+                        },
+                        "type" : "CANVAS_WIDGET",
+                        "props" : {
+                            "shouldScrollContents" : false,
+                            "blueprint" : {
+                                "view" : [ 
+                                    {
+                                        "size" : {
+                                            "rows" : 1,
+                                            "cols" : 2
+                                        },
+                                        "position" : {
+                                            "top" : 0,
+                                            "left" : 14
+                                        },
+                                        "type" : "ICON_WIDGET",
+                                        "props" : {
+                                            "color" : "#040627",
+                                            "iconName" : "cross",
+                                            "iconSize" : 24
+                                        }
+                                    }, 
+                                    {
+                                        "size" : {
+                                            "rows" : 1,
+                                            "cols" : 10
+                                        },
+                                        "position" : {
+                                            "top" : 0,
+                                            "left" : 0
+                                        },
+                                        "type" : "TEXT_WIDGET",
+                                        "props" : {
+                                            "text" : "Modal Title",
+                                            "textStyle" : "HEADING"
+                                        }
+                                    }, 
+                                    {
+                                        "size" : {
+                                            "rows" : 1,
+                                            "cols" : 3
+                                        },
+                                        "position" : {
+                                            "top" : 4,
+                                            "left" : 10
+                                        },
+                                        "type" : "BUTTON_WIDGET",
+                                        "props" : {
+                                            "buttonStyle" : "SECONDARY_BUTTON",
+                                            "text" : "Cancel"
+                                        }
+                                    }, 
+                                    {
+                                        "size" : {
+                                            "rows" : 1,
+                                            "cols" : 3
+                                        },
+                                        "position" : {
+                                            "top" : 4,
+                                            "left" : 13
+                                        },
+                                        "type" : "BUTTON_WIDGET",
+                                        "props" : {
+                                            "buttonStyle" : "PRIMARY_BUTTON",
+                                            "text" : "Confirm"
+                                        }
+                                    }
+                                ],
+                                "operations" : [ 
+                                    {
+                                        "type" : "MODIFY_PROPS"
+                                    }
+                                ]
+                            },
+                            "detachFromLayout" : true,
+                            "children" : [],
+                            "isVisible" : true,
+                            "isDisabled" : false,
+                            "canExtend" : true
+                        }
+                    }
+                ]
+            },
+            "isLoading" : false,
+            "parentColumnSpace" : 1,
+            "size" : "MODAL_LARGE",
+            "leftColumn" : 0,
+            "children" : [ 
+                {
+                    "widgetName" : "Canvas4",
+                    "rightColumn" : 0,
+                    "detachFromLayout" : true,
+                    "widgetId" : "2gyh8lojxi",
+                    "topRow" : 0,
+                    "bottomRow" : 640,
+                    "parentRowSpace" : 1,
+                    "isVisible" : true,
+                    "canExtend" : true,
+                    "type" : "CANVAS_WIDGET",
+                    "parentId" : "fcrbnnx0vb",
+                    "shouldScrollContents" : false,
+                    "blueprint" : {
+                        "view" : [ 
+                            {
+                                "size" : {
+                                    "rows" : 1,
+                                    "cols" : 2
+                                },
+                                "position" : {
+                                    "top" : 0,
+                                    "left" : 14
+                                },
+                                "type" : "ICON_WIDGET",
+                                "props" : {
+                                    "color" : "#040627",
+                                    "iconName" : "cross",
+                                    "iconSize" : 24
+                                }
+                            }, 
+                            {
+                                "size" : {
+                                    "rows" : 1,
+                                    "cols" : 10
+                                },
+                                "position" : {
+                                    "top" : 0,
+                                    "left" : 0
+                                },
+                                "type" : "TEXT_WIDGET",
+                                "props" : {
+                                    "text" : "Modal Title",
+                                    "textStyle" : "HEADING"
+                                }
+                            }, 
+                            {
+                                "size" : {
+                                    "rows" : 1,
+                                    "cols" : 3
+                                },
+                                "position" : {
+                                    "top" : 4,
+                                    "left" : 10
+                                },
+                                "type" : "BUTTON_WIDGET",
+                                "props" : {
+                                    "buttonStyle" : "SECONDARY_BUTTON",
+                                    "text" : "Cancel"
+                                }
+                            }, 
+                            {
+                                "size" : {
+                                    "rows" : 1,
+                                    "cols" : 3
+                                },
+                                "position" : {
+                                    "top" : 4,
+                                    "left" : 13
+                                },
+                                "type" : "BUTTON_WIDGET",
+                                "props" : {
+                                    "buttonStyle" : "PRIMARY_BUTTON",
+                                    "text" : "Confirm"
+                                }
+                            }
+                        ],
+                        "operations" : [ 
+                            {
+                                "type" : "MODIFY_PROPS"
+                            }
+                        ]
+                    },
+                    "minHeight" : 0,
+                    "isLoading" : false,
+                    "parentColumnSpace" : 1,
+                    "leftColumn" : 0,
+                    "children" : [ 
+                        {
+                            "widgetName" : "Icon1",
+                            "rightColumn" : 16,
+                            "onClick" : "{{closeModal('Modal1')}}",
+                            "color" : "#040627",
+                            "iconName" : "cross",
+                            "widgetId" : "03a1gvjum9",
+                            "topRow" : 0,
+                            "bottomRow" : 1,
+                            "isVisible" : true,
+                            "type" : "ICON_WIDGET",
+                            "parentId" : "2gyh8lojxi",
+                            "isLoading" : false,
+                            "leftColumn" : 14,
+                            "iconSize" : 24
+                        }, 
+                        {
+                            "widgetName" : "Text25",
+                            "rightColumn" : 10,
+                            "textAlign" : "LEFT",
+                            "widgetId" : "2z0lu08wvh",
+                            "topRow" : 0,
+                            "bottomRow" : 1,
+                            "isVisible" : true,
+                            "type" : "TEXT_WIDGET",
+                            "dynamicBindings" : {
+                                "value" : true
+                            },
+                            "parentId" : "2gyh8lojxi",
+                            "isLoading" : false,
+                            "leftColumn" : 0,
+                            "text" : "Schedule Interview",
+                            "textStyle" : "HEADING"
+                        }, 
+                        {
+                            "widgetName" : "Button3",
+                            "rightColumn" : 12,
+                            "onClick" : "{{closeModal('Modal1')}}",
+                            "isDefaultClickDisabled" : true,
+                            "widgetId" : "vx54oyxij0",
+                            "buttonStyle" : "SECONDARY_BUTTON",
+                            "topRow" : 13,
+                            "bottomRow" : 14,
+                            "isVisible" : true,
+                            "type" : "BUTTON_WIDGET",
+                            "parentId" : "2gyh8lojxi",
+                            "isLoading" : false,
+                            "leftColumn" : 9,
+                            "dynamicTriggers" : {
+                                "onClick" : true
+                            },
+                            "text" : "Cancel",
+                            "isDisabled" : false
+                        }, 
+                        {
+                            "widgetName" : "Button4",
+                            "rightColumn" : 16,
+                            "onClick" : "{{\nemailInput3.text !== undefined && emailInput3.text !== \"\" ?\nscheduleInterview3.run() : undefined;\nemailInput2.text !== undefined && emailInput2.text !== \"\" ?\nscheduleInterview2.run()  : undefined;\nscheduleInterview1.run(() => { setInterviewStatusScheduled.run(() => {getApplications.run(); closeModal('Modal1')}) }, undefined, { i: 2 })}}",
+                            "isDefaultClickDisabled" : true,
+                            "widgetId" : "kb3ggbux3j",
+                            "dynamicProperties" : {
+                                "onClick" : true
+                            },
+                            "buttonStyle" : "PRIMARY_BUTTON",
+                            "topRow" : 13,
+                            "bottomRow" : 14,
+                            "isVisible" : true,
+                            "type" : "BUTTON_WIDGET",
+                            "parentId" : "2gyh8lojxi",
+                            "isLoading" : false,
+                            "leftColumn" : 12,
+                            "dynamicTriggers" : {
+                                "onClick" : true
+                            },
+                            "text" : "Confirm",
+                            "isDisabled" : false
+                        }, 
+                        {
+                            "widgetName" : "Text26",
+                            "rightColumn" : 4,
+                            "textAlign" : "LEFT",
+                            "widgetId" : "vuexjzke8b",
+                            "topRow" : 2,
+                            "bottomRow" : 3,
+                            "parentRowSpace" : 40,
+                            "isVisible" : true,
+                            "type" : "TEXT_WIDGET",
+                            "dynamicBindings" : {
+                                "value" : true
+                            },
+                            "parentId" : "2gyh8lojxi",
+                            "isLoading" : false,
+                            "parentColumnSpace" : 30.75,
+                            "leftColumn" : 0,
+                            "text" : "Round 1",
+                            "textStyle" : "LABEL"
+                        }, 
+                        {
+                            "widgetName" : "emailInput1",
+                            "rightColumn" : 7,
+                            "widgetId" : "djpqa6ho4a",
+                            "topRow" : 3,
+                            "bottomRow" : 4,
+                            "parentRowSpace" : 40,
+                            "isVisible" : true,
+                            "label" : "",
+                            "type" : "INPUT_WIDGET",
+                            "dynamicBindings" : {
+                                "isValid" : true,
+                                "value" : true
+                            },
+                            "parentId" : "2gyh8lojxi",
+                            "isLoading" : false,
+                            "parentColumnSpace" : 30.75,
+                            "leftColumn" : 0,
+                            "inputType" : "TEXT",
+                            "defaultText" : "",
+                            "placeholderText" : "Interviewer Email"
+                        }, 
+                        {
+                            "widgetName" : "scheduleDate1",
+                            "defaultDate" : "2020-08-25T12:58:02",
+                            "rightColumn" : 15,
+                            "dateFormat" : "YYYY-MM-DDTHH:mm:ss",
+                            "widgetId" : "ritlwn6uni",
+                            "dynamicProperties" : {
+                                "dateFormat" : true
+                            },
+                            "topRow" : 3,
+                            "bottomRow" : 4,
+                            "parentRowSpace" : 40,
+                            "isVisible" : true,
+                            "datePickerType" : "DATE_PICKER",
+                            "label" : "",
+                            "type" : "DATE_PICKER_WIDGET",
+                            "dynamicBindings" : {
+                                "isValid" : true,
+                                "value" : true
+                            },
+                            "parentId" : "2gyh8lojxi",
+                            "isLoading" : false,
+                            "parentColumnSpace" : 30.75,
+                            "leftColumn" : 8,
+                            "isDisabled" : false
+                        }, 
+                        {
+                            "widgetName" : "Text27",
+                            "rightColumn" : 4,
+                            "textAlign" : "LEFT",
+                            "widgetId" : "g04ay4a3ho",
+                            "topRow" : 4,
+                            "bottomRow" : 5,
+                            "parentRowSpace" : 40,
+                            "isVisible" : true,
+                            "type" : "TEXT_WIDGET",
+                            "dynamicBindings" : {
+                                "value" : true
+                            },
+                            "parentId" : "2gyh8lojxi",
+                            "isLoading" : false,
+                            "parentColumnSpace" : 30.75,
+                            "leftColumn" : 0,
+                            "text" : "Round 2",
+                            "textStyle" : "LABEL"
+                        }, 
+                        {
+                            "widgetName" : "emailInput2",
+                            "rightColumn" : 7,
+                            "widgetId" : "zz2l606wq3",
+                            "topRow" : 5,
+                            "bottomRow" : 6,
+                            "parentRowSpace" : 40,
+                            "isVisible" : true,
+                            "label" : "",
+                            "type" : "INPUT_WIDGET",
+                            "dynamicBindings" : {
+                                "isValid" : true,
+                                "value" : true
+                            },
+                            "parentId" : "2gyh8lojxi",
+                            "isLoading" : false,
+                            "parentColumnSpace" : 30.75,
+                            "leftColumn" : 0,
+                            "inputType" : "TEXT",
+                            "defaultText" : "",
+                            "placeholderText" : "Interviewer Email"
+                        }, 
+                        {
+                            "widgetName" : "scheduleDate2",
+                            "defaultDate" : "2020-08-25T12:57:56",
+                            "rightColumn" : 15,
+                            "dateFormat" : "YYYY-MM-DDTHH:mm:ss",
+                            "widgetId" : "o360gbwslb",
+                            "dynamicProperties" : {
+                                "dateFormat" : true
+                            },
+                            "topRow" : 5,
+                            "bottomRow" : 6,
+                            "parentRowSpace" : 40,
+                            "isVisible" : true,
+                            "datePickerType" : "DATE_PICKER",
+                            "label" : "",
+                            "type" : "DATE_PICKER_WIDGET",
+                            "dynamicBindings" : {
+                                "isValid" : true,
+                                "value" : true
+                            },
+                            "parentId" : "2gyh8lojxi",
+                            "isLoading" : false,
+                            "parentColumnSpace" : 30.75,
+                            "leftColumn" : 8,
+                            "isDisabled" : false
+                        }, 
+                        {
+                            "widgetName" : "Text28",
+                            "rightColumn" : 4,
+                            "textAlign" : "LEFT",
+                            "widgetId" : "tbfhdg79m7",
+                            "topRow" : 6,
+                            "bottomRow" : 7,
+                            "parentRowSpace" : 40,
+                            "isVisible" : true,
+                            "type" : "TEXT_WIDGET",
+                            "dynamicBindings" : {
+                                "value" : true
+                            },
+                            "parentId" : "2gyh8lojxi",
+                            "isLoading" : false,
+                            "parentColumnSpace" : 30.75,
+                            "leftColumn" : 0,
+                            "text" : "Round 3",
+                            "textStyle" : "LABEL"
+                        }, 
+                        {
+                            "widgetName" : "emailInput3",
+                            "rightColumn" : 7,
+                            "widgetId" : "o7e6pg29wi",
+                            "topRow" : 7,
+                            "bottomRow" : 8,
+                            "parentRowSpace" : 40,
+                            "isVisible" : true,
+                            "label" : "",
+                            "type" : "INPUT_WIDGET",
+                            "dynamicBindings" : {
+                                "isValid" : true,
+                                "value" : true
+                            },
+                            "parentId" : "2gyh8lojxi",
+                            "isLoading" : false,
+                            "parentColumnSpace" : 30.75,
+                            "leftColumn" : 0,
+                            "inputType" : "TEXT",
+                            "placeholderText" : "Interviewer Email"
+                        }, 
+                        {
+                            "widgetName" : "scheduleDate3",
+                            "defaultDate" : "2020-08-25T12:58:11",
+                            "rightColumn" : 15,
+                            "dateFormat" : "YYYY-MM-DDTHH:mm:ss",
+                            "widgetId" : "7ybu9avfpt",
+                            "dynamicProperties" : {
+                                "dateFormat" : true
+                            },
+                            "topRow" : 7,
+                            "bottomRow" : 8,
+                            "parentRowSpace" : 40,
+                            "isVisible" : true,
+                            "datePickerType" : "DATE_PICKER",
+                            "label" : "",
+                            "type" : "DATE_PICKER_WIDGET",
+                            "dynamicBindings" : {
+                                "isValid" : true,
+                                "value" : true
+                            },
+                            "parentId" : "2gyh8lojxi",
+                            "isLoading" : false,
+                            "parentColumnSpace" : 30.75,
+                            "leftColumn" : 8,
+                            "isDisabled" : false
+                        }, 
+                        {
+                            "widgetName" : "Text29",
+                            "rightColumn" : 15,
+                            "textAlign" : "LEFT",
+                            "widgetId" : "c5y9w6rmn0",
+                            "topRow" : 2,
+                            "bottomRow" : 3,
+                            "parentRowSpace" : 40,
+                            "isVisible" : true,
+                            "type" : "TEXT_WIDGET",
+                            "dynamicBindings" : {
+                                "value" : true
+                            },
+                            "parentId" : "2gyh8lojxi",
+                            "isLoading" : false,
+                            "parentColumnSpace" : 30.75,
+                            "leftColumn" : 10,
+                            "text" : "Interview Schedule",
+                            "textStyle" : "LABEL"
+                        }
+                    ],
+                    "isDisabled" : false
+                }
+            ]
+        }, 
+        {
+            "widgetName" : "Text30",
+            "rightColumn" : 13,
+            "textAlign" : "LEFT",
+            "widgetId" : "93zn04kekp",
+            "dynamicProperties" : {
+                "isVisible" : true
+            },
+            "topRow" : 0,
+            "bottomRow" : 1,
+            "parentRowSpace" : 40,
+            "isVisible" : "{{application_table.selectedRow.id === undefined}}",
+            "type" : "TEXT_WIDGET",
+            "dynamicBindings" : {
+                "isVisible" : true,
+                "value" : true
+            },
+            "parentId" : "0",
+            "isLoading" : false,
+            "parentColumnSpace" : 74,
+            "leftColumn" : 9,
+            "text" : "👈 Select a job application",
+            "textStyle" : "HEADING"
+        }
+    ]
+}
